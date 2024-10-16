@@ -1,0 +1,22 @@
+{%extends 'index.html'%}
+{%load static%}
+{%block content%}
+    <link rel="stylesheet" href="{% static 'app/css/register.css' %}">
+    <h2>Register</h2>
+    <form class="register" method="POST">
+      {% csrf_token %} 
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" name="first_name" required />
+
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" name="last_name" required />
+
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required />
+      
+      {{ form.as_p }}
+      <button type="submit">Register</button>
+
+      
+    </form>
+{%endblock%}

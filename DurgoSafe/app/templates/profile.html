@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Profile</h1>
+    </header>
+    <main>
+        <h2>Welcome, {{ user.username }}!</h2>
+<p>Your email: {{ user.email }}</p>
+<p>Your first name: {{ user.first_name }}</p>
+<p>Your last name: {{ user.last_name }}</p>
+<a href="{% url 'add_password' %}">Add Password</a>
+<a href="{% url 'view_passwords' %}">View Passwords</a>
+
+<a href="{% url 'logout' %}">Logout</a>
+
+    </main>
+    <footer>
+        <p>&copy; 2023 DurgoSafe</p>
+    </footer>
+</body>
+</html>
