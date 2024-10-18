@@ -1,9 +1,5 @@
 from django.contrib import admin
-from .models import password_manager
+from .models import CustomUser, PasswordManager
 
-
-# Register your models here.
-admin.site.register(password_manager)
-
-
-
+admin.site.register(CustomUser)
+admin.site.register(PasswordManager)

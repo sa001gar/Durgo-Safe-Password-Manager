@@ -88,7 +88,7 @@ section .signin .content
 section .signin .content h2 
 {
   font-size: 2em;
-  color: rgb(111, 0, 255);
+  color: rgb(140, 0, 255);
   text-transform: uppercase;
 }
 section .signin .content .form 
@@ -145,20 +145,30 @@ section .signin .content .form .inputBox i
   color: #fff;
   text-decoration: none;
 }
-.signin .content .form .links a:nth-child(2)
+.a.register
 {
-  color: rgb(111, 0, 255);
+  color: rgb(140, 0, 255);
   font-weight: 600;
+}
+.signin>.content>.form>.links>a:hover
+{
+  text-decoration: underline;
 }
 .signin .content .form .inputBox input[type="submit"]
 {
   padding: 10px;
-  background:rgb(111, 0, 255);
+  background:rgb(140, 0, 255);
   color: #000;
   font-weight: 600;
   font-size: 1.35em;
   letter-spacing: 0.05em;
   cursor: pointer;
+}
+
+.signin .content .form .inputBox input[type="submit"]:hover
+{
+  background: #fff;
+  color: rgb(140, 0, 255);
 }
 input[type="submit"]:active
 {

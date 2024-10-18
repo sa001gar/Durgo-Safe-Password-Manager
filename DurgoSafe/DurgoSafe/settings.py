@@ -138,4 +138,8 @@ LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'login'
 
 
+# Custom User Model
+AUTH_USER_MODEL = 'app.CustomUser'
+
+
 

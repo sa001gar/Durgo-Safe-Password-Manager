@@ -40,12 +40,22 @@ form.register {
 /* Form Input Fields */
 form.register input[type="text"],
 form.register input[type="email"],
-form.register input[type="password"] {
+form.register input[type="password"],
+form.register select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form.register input[type="text"]:focus,
+form.register input[type="email"]:focus,
+form.register input[type="password"]:focus,
+form.register select:focus {
+    border-color: #2c24a3;
+    outline: none;
 }
 
 /* Submit Button */
@@ -58,17 +68,19 @@ form.register button[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form.register button[type="submit"]:hover {
     background-color: #4f59e2;
+    transform: translateY(-2px);
 }
 
 /* Form Labels */
 form.register label {
     margin-bottom: 5px;
     font-weight: bold;
+    color: #2c24a3;
 }
 
 /* Error Styling */
@@ -115,20 +127,21 @@ footer p {
     }
 }
 
-
+/* List Styles */
 ul {
     list-style-type: none;
-    
 }
 
-ul>li{
+ul > li {
     color: #093181;
 }
 
-span.helptext{
-    color:#093181;
+/* Help Text */
+span.helptext {
+    color: #093181;
 }
 
-label{
+/* Additional Label Margin */
+label {
     margin-top: 2px;
 }

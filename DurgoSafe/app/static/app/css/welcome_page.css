@@ -1,0 +1,132 @@
+ /* Global Styles */
+ body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #E6E6FA; /* Lavender */
+    color: #333;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #fff; /* White */
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+#hero p {
+    font-size: 18px;
+    color: #555;
+}
+.hero-buttons {
+    margin-top: 20px;
+}
+.hero-buttons .btn {
+    background-color: #333; /* Dark Gray */
+    color: white;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.hero-buttons .btn:hover {
+    background-color: #555;
+}
+
+/* Features Section */
+#features {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.feature-box {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.feature-box h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+.feature-box p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Rating Section */
+#ratings {
+    margin-top: 50px;
+    background-color: #333; /* Dark Gray */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+#ratings h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+.rating-stars i {
+    font-size: 25px;
+    color: #FFD700; /* Gold for stars */
+}
+
+/* Image Section */
+#image-section {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+#image-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark Gray */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    #hero h1 {
+        font-size: 28px;
+    }
+    #hero p {
+        font-size: 16px;
+    }
+    .hero-buttons .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
