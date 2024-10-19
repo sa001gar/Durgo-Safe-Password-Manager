@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jt-f*m=!7qsdyz&z1q^1d5@6$-u%1q8iee2*e!idgl%^_c3%z8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".awsapprunner.com"]
 
 
 # Application definition
@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'DurgoSafe.urls'
@@ -117,15 +118,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 import os
-STATIC_URL = '/static/'
+STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# Add STATICFILES_DIRS if you want Django to look in extra locations for static files:
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # This is optional if you have a global 'static' folder
-]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # This is where 'collectstatic' will store files
-
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 
 # Default primary key field type
